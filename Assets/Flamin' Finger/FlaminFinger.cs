@@ -1302,6 +1302,7 @@ public class FlaminFinger : MonoBehaviour {
             yield break;
         }
         yield return null;
+        if (!canPlay) yield break; // Accounts for the timer running out while focusing on the module
         int curPos = selectedTile;
         for (int i = 0; i < command.Length; i++) {
             int amtAdded = 0;
